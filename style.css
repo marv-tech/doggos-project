@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Shadows Into Light', cursive;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+
+header{
+    display: flex;
+    background-color: rgb(241, 233, 233);
+    opacity: 0.8;
+    color:red;
+    height: 11vh;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    justify-content: space-between;
+    
+}
+
+.heading{
+    padding-left: 20px;
+
+}
+
+
+@keyframes spin{
+    to{
+        transform: rotateZ(360deg);
+    }
+
+}
+
+.spinner{
+    font-size: 50px;
+    text-align: center;
+    animation: 2s spin linear infinite;
+    display: none; 
+}
+
+.dog-img{
+    display: none;
+    border-radius: 25px;
+    margin: 50px auto;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+
+    
+}
+
+.show{
+    display: block;
+}
+
+.disappeared{
+    animation: disappear .4s 1;
+  }
+  .appeared{
+    animation: appear .4s 1;
+  }
+  
+  @keyframes disappear{
+    0%{
+      opacity: 100%;
+    }
+     40%{
+      opacity: 60%;
+    }
+     80%{
+      opacity: 20%;
+    }
+     100%{
+      opacity: 0%;
+    }
+  }
+  @keyframes appear{
+    0%{
+      opacity: 0%;
+    }
+     40%{
+      opacity: 20%;
+    }
+     80%{
+      opacity: 60%;
+    }
+     100%{
+      opacity: 100%;
+    }
+  }
+  
+.paws{
+    position:absolute;
+    z-index: 3;
+    
+}
+
+.paw1{
+    left:80%;
+    bottom: 80%;
+}
+
+.paw2{
+    left:5%;
+    bottom: 80%;
+}
+
+.paw3{
+    right:10%;
+    top: 30%;
+}
+
+.paw4{
+    left:15%;
+    top: 90%;
+}
+.paw5{
+    left: 80%;
+    bottom: 10%;
+}
+@keyframes sideText{
+  0%   {color:red; }
+  25%  {color:yellow; }
+  50%  {color:blue; }
+  75%  {color:green; }
+  100% {color:rgb(255, 255, 255); }
+}
+
+
+.sideText{
+    font-size: 40px;
+    color: white;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    margin: 15px;
+    width: 450px;
+    text-align: center;
+    animation: sideText 10s linear 2s infinite alternate;
+    
+}
+
+footer{
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
+
